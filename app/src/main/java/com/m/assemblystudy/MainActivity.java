@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     public void jump(View view) {
         switch (view.getId()) {
             case R.id.order:
-                ARouter.getInstance().build("/order/main").navigation();
+                ARouter.getInstance().build("/order/OrderMainActivity").navigation();
                 break;
             case R.id.personal:
                 startActivity(new Intent(this, PersonalMainActivity.class));

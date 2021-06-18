@@ -8,6 +8,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.m.common.router.RouterMapUtil;
 import com.m.personal.PersonalMainActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
     public void jump(View view) {
         switch (view.getId()) {
             case R.id.order:
-                ARouter.getInstance().build("/order/OrderMainActivity").navigation();
+                ARouter.getInstance().build(RouterMapUtil.order).navigation();
                 break;
             case R.id.personal:
-                startActivity(new Intent(this, PersonalMainActivity.class));
+               ARouter.getInstance().build(RouterMapUtil.personal).navigation();
                 break;
 
         }

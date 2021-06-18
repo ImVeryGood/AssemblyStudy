@@ -43,6 +43,12 @@
             applicationId "com.m.order"
         }
     }
+ 在app添加module依赖时，如果`isRease` 作位library库引入
+
+    if (isRease){
+        implementation project(':order')
+        implementation project(':personal')
+    }
 5.最后就是对`AndroidManifest`配置
 
 在main下创建一个debug文件夹，拷贝AndroidManifest
